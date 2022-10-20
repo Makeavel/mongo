@@ -15,6 +15,7 @@ public class User {
 
     @Id
     private Integer id;
+    private String name;
     @DBRef
     private Profile profile;
     private String phone;
