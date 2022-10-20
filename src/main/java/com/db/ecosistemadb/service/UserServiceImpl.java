@@ -25,4 +25,9 @@ public class UserServiceImpl implements UserService {
 
         return this.userRepository.save(user);
     }
+
+    @Override
+    public User verUser(Integer id) {
+        return userRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Inexistente"));
+    }
 }

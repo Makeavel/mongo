@@ -5,4 +5,6 @@ import com.db.ecosistemadb.model.User;
 public interface UserService {
 
     User save(User id);
+
+    User verUser(Integer id);
 }
