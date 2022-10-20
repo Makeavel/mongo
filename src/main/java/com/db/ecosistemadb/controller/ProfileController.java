@@ -2,7 +2,7 @@ package com.db.ecosistemadb.controller;
 
 
 import com.db.ecosistemadb.model.Profile;
-import com.db.ecosistemadb.repository.ProfilesRepository;
+import com.db.ecosistemadb.repository.ProfileRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class ProfileController {
 
     @Autowired
-    private ProfilesRepository profilesRepository;
+    private ProfileRepository profileRepository;
 
     @PostMapping("/profiles")
     public Profile createProfiles(@RequestBody Profile id){
-        return profilesRepository.save(id);
+        return profileRepository.save(id);
     }
 }

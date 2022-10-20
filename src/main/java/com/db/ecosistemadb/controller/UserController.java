@@ -16,7 +16,7 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/users")
-    public User createProfiles(@RequestBody User id){
-        return userService.save(id);
+    public User createProfiles(@RequestBody User user){
+        return userService.save(user);
     }
 }
