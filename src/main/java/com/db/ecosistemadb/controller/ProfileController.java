@@ -1,8 +1,8 @@
 package com.db.ecosistemadb.controller;
 
-import com.db.ecosistemadb.model.Users;
-import com.db.ecosistemadb.repository.UsersRepository;
-import com.db.ecosistemadb.service.UsersService;
+
+import com.db.ecosistemadb.model.Profile;
+import com.db.ecosistemadb.repository.ProfilesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController()
 @RequestMapping("/eco")
-public class UsersController {
+public class ProfileController {
 
     @Autowired
-    private UsersService usersService;
+    private ProfilesRepository profilesRepository;
 
-    @PostMapping("/users")
-    public Users createProfiles(@RequestBody Users id){
-        return usersService.save(id);
+    @PostMapping("/profiles")
+    public Profile createProfiles(@RequestBody Profile id){
+        return profilesRepository.save(id);
     }
 }

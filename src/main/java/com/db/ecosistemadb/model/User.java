@@ -11,12 +11,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @AllArgsConstructor
 @NoArgsConstructor
 @Document(collection = "users")
-public class Users {
+public class User {
 
     @Id
     private Integer id;
     @DBRef
-    private Profiles idNome;
+    private Profile idNome;
     private String phone;
     private String cpf;
 }

@@ -1,26 +1,23 @@
 package com.db.ecosistemadb.service;
 
-import com.db.ecosistemadb.model.Profiles;
-import com.db.ecosistemadb.model.Users;
+import com.db.ecosistemadb.model.User;
 import com.db.ecosistemadb.repository.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
-
 @Service
-public class UsersServiceImpl implements UsersService{
+public class UserServiceImpl implements UserService {
 
     @Autowired
     private UsersRepository userRepository;
 
     @Override
-    public Users save(Users id) {
+    public User save(User id) {
 
-        Users usuario = this.userRepository.findById(id.getIdNome().getId())
+        User usuario = this.userRepository.findById(id.getIdNome().getId())
                 .orElseThrow(() -> new IllegalArgumentException("Inexistente"));
 
-        System.out.println(usuario);
+
         return this.userRepository.save(usuario);
     }
 }
