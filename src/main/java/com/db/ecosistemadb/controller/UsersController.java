@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController()
 @RequestMapping("/eco")
-public class UserController {
+public class UsersController {
 
     @Autowired
     private UserService userService;

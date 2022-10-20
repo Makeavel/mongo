@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController()
 @RequestMapping("/eco")
-public class ProfileController {
+public class ProfilesController {
 
     @Autowired
     private ProfileRepository profileRepository;

@@ -1,9 +1,10 @@
-package com.db.ecosistemadb.service;
+package com.db.ecosistemadb.service.Impl;
 
 import com.db.ecosistemadb.model.Profile;
 import com.db.ecosistemadb.model.User;
 import com.db.ecosistemadb.repository.ProfileRepository;
 import com.db.ecosistemadb.repository.UserRepository;
+import com.db.ecosistemadb.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

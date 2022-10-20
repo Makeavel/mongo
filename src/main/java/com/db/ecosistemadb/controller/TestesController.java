@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController()
 @RequestMapping("/eco")
-public class TesteController {
+public class TestesController {
 
     @Autowired
-    TesteService testeService;
+    private TesteService testeService;
 
     @PostMapping("/teste")
     public Teste createProfiles(@RequestBody Teste teste){
